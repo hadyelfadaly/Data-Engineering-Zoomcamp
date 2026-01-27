@@ -1,7 +1,7 @@
 # Homework
 
 ## Question 1 & 2 & 7 Answered in MCQ
-## Quetions 3 - 6 Answered in MCQ and Below is the SQL Queries and homework.ipynb in pipelines folder.
+## Quetions 3 - 6 Answered in MCQ and Below is the SQL Queries and homework.ipynb in Pipelines Folder.
 
 ```SQL
 --QUESTION 3 in homework
@@ -36,3 +36,4 @@ GROUP BY lu."Zone"
 ORDER BY MAX(gt."tip_amount") DESC;
 --answer = Yorkville West
 ```
+
