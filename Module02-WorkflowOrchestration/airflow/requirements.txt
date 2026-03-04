@@ -1,0 +1,6 @@
+pandas
+google-cloud-storage
+pyarrow
+apache-airflow-providers-google
+sqlalchemy
+psycopg2-binary

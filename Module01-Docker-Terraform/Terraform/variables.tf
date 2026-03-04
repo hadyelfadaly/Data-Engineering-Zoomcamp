@@ -20,7 +20,7 @@ variable "location" {
 variable "bq_dataset_name" {
   description = "The name of the BigQuery dataset"
   type        = string
-  default     = "demo_dataset"
+  default     = "scenic-dynamo-485615-f3-terra-dataset"
 
 }
 
