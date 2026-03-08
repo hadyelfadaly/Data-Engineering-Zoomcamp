@@ -335,7 +335,7 @@ In short: Pandas is for _analyzing and manipulating_ data. PyArrow is for _movin
 # Airflow Architecture
 
 This is the official **Airflow Architecture Diagram**. It shows how the different "organs" of the Airflow body work together to keep your data pipelines alive.
-![Airflow Architecture][Imgs/Pasted%20image%2020260303030128.png]
+![Airflow Architecture](Imgs/Pasted%20image%2020260303030128.png)
 
 Here is the breakdown of each component using a simple "Restaurant Kitchen" analogy to make it stick:
 
