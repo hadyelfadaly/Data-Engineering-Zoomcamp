@@ -274,3 +274,5 @@ webserver_config.py
 # Docker / Databases
 postgres_data/
 pgdata/
+
+.obsidian/
