@@ -284,12 +284,26 @@ pgdata/
 /Workshop01-Data-Ingestion/.dlt/.var
 /Workshop01-Data-Ingestion/_local/
 /Workshop01-Data-Ingestion/.dlt/
+/Workshop01-Data-Ingestion/taxi-pipeline/.dlt/
+/Workshop01-Data-Ingestion/taxi-pipeline/_local/
+/Workshop01-Data-Ingestion/taxi-pipeline/.streamlit/secrets.toml
+/Workshop01-Data-Ingestion/taxi-pipeline/.DS_Store
+/Workshop01-Data-Ingestion/taxi-pipeline/.vscode/
+/Workshop01-Data-Ingestion/taxi-pipeline/.idea/
+/Workshop01-Data-Ingestion/taxi-pipeline/.python-version
 /Workshop01-Data-Ingestion/*.duckdb
 /Workshop01-Data-Ingestion/*.wal
 /Workshop01-Data-Ingestion/.streamlit/secrets.toml
 /Workshop01-Data-Ingestion/.DS_Store
 /Workshop01-Data-Ingestion/.vscode/
 /Workshop01-Data-Ingestion/.idea/
+/Workshop01-Data-Ingestion/taxi-pipeline/Pipfile.lock
+/Workshop01-Data-Ingestion/taxi-pipeline/uv.lock
+/Workshop01-Data-Ingestion/taxi-pipeline/poetry.lock
+/Workshop01-Data-Ingestion/taxi-pipeline/poetry.toml
+/Workshop01-Data-Ingestion/taxi-pipeline/pdm.lock
+/Workshop01-Data-Ingestion/taxi-pipeline/pdm.toml
+/Workshop01-Data-Ingestion/taxi-pipeline/pixi.lock
 
 # Optional lockfiles for this workshop environment
 /Workshop01-Data-Ingestion/Pipfile.lock
