@@ -17,6 +17,3 @@ Based on copilot answer is:
 Based on dlt dashboard sql query I ran and when I asked copilot answer is:
 
 - $6,063.41
-
-## Question 4
-
