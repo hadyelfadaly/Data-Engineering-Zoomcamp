@@ -276,3 +276,26 @@ postgres_data/
 pgdata/
 
 .obsidian/
+
+# Workshop01 Data Ingestion (merged from local .gitignore)
+/Workshop01-Data-Ingestion/secrets.toml
+/Workshop01-Data-Ingestion/*.secrets.toml
+/Workshop01-Data-Ingestion/.dlt/profile-name
+/Workshop01-Data-Ingestion/.dlt/.var
+/Workshop01-Data-Ingestion/_local/
+/Workshop01-Data-Ingestion/.dlt/
+/Workshop01-Data-Ingestion/*.duckdb
+/Workshop01-Data-Ingestion/*.wal
+/Workshop01-Data-Ingestion/.streamlit/secrets.toml
+/Workshop01-Data-Ingestion/.DS_Store
+/Workshop01-Data-Ingestion/.vscode/
+/Workshop01-Data-Ingestion/.idea/
+
+# Optional lockfiles for this workshop environment
+/Workshop01-Data-Ingestion/Pipfile.lock
+/Workshop01-Data-Ingestion/uv.lock
+/Workshop01-Data-Ingestion/poetry.lock
+/Workshop01-Data-Ingestion/poetry.toml
+/Workshop01-Data-Ingestion/pdm.lock
+/Workshop01-Data-Ingestion/pdm.toml
+/Workshop01-Data-Ingestion/pixi.lock
