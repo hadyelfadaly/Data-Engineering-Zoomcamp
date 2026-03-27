@@ -313,3 +313,5 @@ pgdata/
 /Workshop01-Data-Ingestion/pdm.lock
 /Workshop01-Data-Ingestion/pdm.toml
 /Workshop01-Data-Ingestion/pixi.lock
+
+.dlt/

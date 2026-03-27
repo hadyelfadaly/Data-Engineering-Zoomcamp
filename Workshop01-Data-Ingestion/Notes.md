@@ -496,3 +496,61 @@ python open_library_pipeline.py
 ```bash
 dlt pipeline open_library_pipeline show
 ```
+
+
+
+# Needed Libraries for Ingestion
+## Requests Library
+
+The `requests` library in Python is a wildly popular tool used to send HTTP requests. In simple terms, it allows your Python code to talk to the internet, acting very much like a web browser without the graphical interface.
+
+Whenever you need your code to fetch data from a website, send data to a server, or interact with a web service, `requests` is usually the go-to tool.
+
+### What is it primarily used for?
+
+- **Interacting with APIs:** This is its most common use case. You can use it to pull live data from REST APIs (like fetching weather data, stock prices, or sports scores) by sending a `GET` request.
+- **Web Scraping:** You can use it to download the raw HTML of a webpage. Once downloaded, you'd typically pair it with another library (like `BeautifulSoup`) to extract the specific text or data you want.
+- **Sending Data:** You can use it to programmatically submit forms, upload files, or send JSON data to a server using a `POST` request.
+- **Downloading Files:** It can easily grab images, CSVs, PDFs, or any other files hosted online and save them directly to your local machine.
+
+### Why is it so popular?
+
+Python actually has a built-in module for handling HTTP requests called `urllib`. However, `urllib` is notoriously clunky and requires a lot of boilerplate code for even simple tasks.
+
+The motto of the `requests` library is "HTTP for Humans." It abstracts away all the confusing complexities behind a beautiful, simple API. Things like passing URL parameters, authenticating with a server, or automatically decoding JSON responses take just a single line of code.
+
+
+## BytesIO
+
+If `requests` is the tool you use to grab data from the internet, `BytesIO` (from Python's built-in `io` module) is where you can temporarily hold that data without ever saving it to your hard drive.
+
+Think of it as a **virtual file that lives entirely in your RAM.** It tricks Python into thinking it's interacting with a real file saved on your computer, when in reality, everything is happening in memory.
+
+### Why use `BytesIO` with `requests`?
+
+When you download a file (like a CSV, a zip archive, or an image) using `requests`, the raw binary data is stored in `response.content`. However, many Python libraries (like `pandas` or `zipfile`) expect to read from a _file_, not a raw string of bytes.
+
+Instead of writing that data to your disk just to read it again, you wrap it in `BytesIO`.
+
+### Why this is a superpower for Data Pipelines
+
+When you are building automated ETL pipelines—especially ones that run inside isolated environments like Docker containers or are managed by orchestrators like Airflow—you generally want to avoid reading and writing temporary files to the local disk. It slows things down and creates cleanup work.
+
+With `BytesIO`, you can grab data from an API, hold it in memory, transform it, and push it directly into a data warehouse or cloud storage, keeping your pipeline fast and clean.
+
+## Yield
+
+In Python, `yield` is a keyword used to return data from a function, but with a massive twist: **it doesn't destroy the function's local state.** When a function uses `yield` instead of `return`, it becomes a **generator**.
+
+Here is the easiest way to think about the difference:
+
+- **`return` is like a caterer:** It prepares all 1,000 sandwiches in the kitchen, puts them on a massive platter, and brings them to you all at once. This requires a huge platter and a lot of table space (RAM/memory). Once the caterer drops them off, their job is entirely done.
+- **`yield` is like a vending machine:** It gives you exactly one sandwich. It then pauses and waits. When you press the button for another one, it remembers exactly where it left off and dispenses the next sandwich. It only takes up enough space for one sandwich at a time.
+
+### Why Data Engineers Love `yield`
+
+Since you are building ETL pipelines and working with tools like `dlt`, `yield` is basically a superpower for memory management.
+
+If you use the `requests` library to pull 5 million rows from a database or an API, putting all 5 million rows into a single Python list and using `return` will likely crash your machine (Out of Memory error).
+
+Instead, you use `yield` to process and pass along one chunk of data at a time. Tools like `dlt` are specifically designed to accept these generators so they can stream data directly to your destination (like BigQuery or your local filesystem) without ever holding the whole dataset in RAM.
