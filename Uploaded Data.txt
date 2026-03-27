@@ -1,1 +1,0 @@
-This file is used to keep track of the processed data files. It will be updated with the names of the files that have been successfully processed and loaded into the database.
