@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data from the NYC Taxi dataset, directly from BigQuery."
+    database: scenic-dynamo-485615-f3 #project id
+    schema: nytaxi #dataset name
+    tables:
+      - name: yellow_taxi_trips
+        description: "Yellow taxi trip data, including pickup and dropoff times, locations, and fares."
+      - name: green_taxi_trips
+        description: "Green taxi trip data, including pickup and dropoff times, locations, and fares."
+
+    

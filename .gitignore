@@ -315,3 +315,7 @@ pgdata/
 /Workshop01-Data-Ingestion/pixi.lock
 
 .dlt/
+
+target/
+dbt_packages/
+logs/
